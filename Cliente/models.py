@@ -41,6 +41,8 @@ class Producto(models.Model):
                                        null=True)  # Field name made lowercase.
     descripcion = models.CharField(db_column='Descripción', max_length=255, blank=True,
                                    null=True)  # Field name made lowercase.
+    categoria = models.CharField(db_column='Categoria', max_length=50, blank=True, null=True)
+    imagen = models.ImageField(db_column='Imagen', upload_to='media', blank=True, null=True)
     precio_unitario = models.DecimalField(db_column='Precio_Unitario', max_digits=10, decimal_places=2, blank=True,
                                           null=True)  # Field name made lowercase.
     stock_disponible = models.IntegerField(db_column='Stock_Disponible', blank=True,
